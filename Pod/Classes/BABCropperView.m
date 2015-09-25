@@ -287,7 +287,7 @@ static UIImage* BABCropperViewCroppedAndScaledImageWithCropRect(UIImage *image, 
     [self addSubview:self.cropMaskView];
     
     self.borderView = [[UIView alloc] initWithFrame:self.cropMaskView.bounds];
-    self.borderView.layer.borderColor = [UIColor whiteColor].CGColor;
+    self.borderView.layer.borderColor = [UIColor clearColor].CGColor;
     self.borderView.layer.borderWidth = [UIScreen mainScreen].scale/4.0f;
     self.borderView.userInteractionEnabled = NO;
     [self addSubview:self.borderView];
