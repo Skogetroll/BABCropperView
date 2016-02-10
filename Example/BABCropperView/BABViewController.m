@@ -23,7 +23,7 @@
     
     [super viewDidLoad];
     
-    self.cropperView.cropSize = CGSizeMake(720.0f, 720.0f);
+    self.cropperView.cropSize = CGSizeMake(1024.0f, 720.0f);
     self.cropperView.cropsImageToCircle = NO;
 }
 
@@ -61,7 +61,7 @@
         
         __weak typeof(self)weakSelf = self;
         
-        [self.cropperView renderCroppedImage:^(UIImage *croppedImage){
+        [self.cropperView renderCroppedImage:^(UIImage *croppedImage, CGRect cropRect){
             
             [weakSelf displayCroppedImage:croppedImage];
         }];
